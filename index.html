@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rompecabezas</title>
+</head>
+<body>
+ 
+  <div id="modojuego">
+    <h1>MODO DE JUEGO</h1>
+    <button onclick="mostrarDificil()" ><img src="images/dificil.jpg" alt="elegir dificil" id="dificil"></button>
+    <button onclick="mostrarFacil()"><img src="images/facil2.jpg" alt="elegir facil" id="facil"></button>
+  </div>
+
+    <div id="tutor">
+    <div class="col-40">
+    
+        <div id="titulo">
+          <h1 id="title">Tutor Bunny</h1>
+        </div>
+        <div id="instrucciones">
+          <h2>Instrucciones</h2>
+          <ul id="lista-instrucciones">
+        
+          </ul>
+        </div>
+
+        <div id="objetivo">
+          <h2>Referencia</h2>
+          
+          <div id="fotos">
+            <img class="imagen-objetivo column" src="images/bunny.jpg" alt="referencia" id="refe">
+          </div>
+
+        </div>
+        <div id="ultimo-mov">
+          <h2>Último movimiento</h2>
+          <div id="flecha" class="texto-centrado">
+            
+          </div>
+        </div>
+        
+      </div>
+      <div class="col-60" id="juego2">
+        <div id="juego">
+          <div id="pieza1" class="piezas-rompecabezas"><img class="imagen-rompecabeza menos" src="images/bunny_00.jpg" alt="imagen1"></div>
+          <div id="pieza2" class="piezas-rompecabezas"><img class="imagen-rompecabeza menos" src="images/bunny_01.jpg" alt="imagen2"></div>
+          <div id="pieza3" class="piezas-rompecabezas"><img class="imagen-rompecabeza menos" src="images/bunny_02.jpg" alt="imagen3"></div>
+          <div id="pieza4" class="piezas-rompecabezas"><img class="imagen-rompecabeza menos" src="images/bunny_03.jpg" alt="imagen4"></div>
+          <div id="pieza5" class="piezas-rompecabezas"><img class="imagen-rompecabeza menos" src="images/bunny_04.jpg" alt="imagen5"></div>
+          <div id="pieza6" class="piezas-rompecabezas"><img class="imagen-rompecabeza menos" src="images/bunny_05.jpg" alt="imagen6"></div>
+          <div id="pieza7" class="piezas-rompecabezas"><img class="imagen-rompecabeza menos" src="images/bunny_06.jpg" alt="imagen7"></div>
+          <div id="pieza8" class="piezas-rompecabezas"><img class="imagen-rompecabeza menos" src="images/bunny_07.jpg" alt="imagen8"></div>
+          <div id="pieza9" class="piezas-rompecabezas"><img class="imagen-rompecabeza" src="" alt="" id="imgpieza9"></div>
+        </div>
+
+        <div id="juegoRompecabeza">
+          <svg width="600" height="600" id="entorno">
+            <g id="fondo"> <image xlink:href="images/bunnyrompe.png" width="400" height="400" x="100" y="100" id="imgfondo"></g>
+            <g class="padre" id="0"><image xlink:href="images/bunny0.png" class="movil"></g>
+            <g class="padre" id="1"><image xlink:href="images/bunny1.png" class="movil"></g>
+            <g class="padre" id="2"><image xlink:href="images/bunny2.png" class="movil"></g>
+            <g class="padre" id="3"><image xlink:href="images/bunny3.png" class="movil"></g>
+            <g class="padre" id="4"><image xlink:href="images/bunny4.png" class="movil"></g>
+            <g class="padre" id="5"><image xlink:href="images/bunny5.png" class="movil"></g>    
+            <g class="padre" id="6"><image xlink:href="images/bunny6.png" class="movil"></g>
+            <g class="padre" id="7"><image xlink:href="images/bunny7.png" class="movil"></g>
+            <g class="padre" id="8"><image xlink:href="images/bunny8.png" class="movil"></g>            
+        </svg>
+        </div>
+
+      </div>
+    </div>
+
+
+        <div id="container">
+          <div class="confetti"></div><div class="confetti"></div><div class="confetti"></div><div class="confetti"></div>
+          <div class="confetti"></div><div class="confetti"></div><div class="confetti"></div><div class="confetti"></div>
+          <div class="confetti"></div><div class="confetti"></div><div class="confetti"></div><div class="confetti"></div>
+          <div class="confetti"></div><div class="confetti"></div><div class="confetti"></div><div class="confetti"></div>
+          </div>
+
+
+          <div class="mostrarAlGanar" id="mostrarAlGanar">
+            <ul id="alGanarCambiar">
+              <li class="cambiarImagen"><img class="imagen-cambiar" src="images/bunny.jpg" alt="bunny" id="" onclick="cambiarimagen(bunny, tutorbunny, pinks);"></li>
+              <li class="cambiarImagen"><img class="imagen-cambiar" src="images/koala.jpg" alt="koala" id="" onclick="cambiarimagen(koala, fighterkoala, blacks);"></li>
+              <li class="cambiarImagen"><img class="imagen-cambiar" src="images/koalabunny.jpg" alt="bunny&koala" id="" onclick="cambiarimagen(koalabunny, tutorfighter, greys);"></li>
+              <li class="cambiarImagen"><img class="imagen-cambiar" src="images/facil2.jpg" alt="otroRompecabeza" id="" onclick="cambiaraFacil()"></li>
+            </ul>
+          </div>
+
+          <div class="mostrarAlGanar" id="mostrarAlGanar2">
+            <ul id="alGanarCambiar">
+              <li class="cambiarImagen"><img class="imagen-cambiar" src="images/bunny.jpg" alt="bunny" id="" onclick="cambiarimagen2(bunny, tutorbunny, pinks);"></li>
+              <li class="cambiarImagen"><img class="imagen-cambiar" src="images/koala.jpg" alt="koala" id="" onclick="cambiarimagen2(koala, fighterkoala, blacks);"></li>
+              <li class="cambiarImagen"><img class="imagen-cambiar" src="images/koalabunny.jpg" alt="bunny&koala" id="" onclick="cambiarimagen2(koalabunny, tutorfighter, greys);"></li>
+              <li class="cambiarImagen"><img class="imagen-cambiar" src="images/dificil.jpg" alt="otroRompecabeza2" id="" onclick="cambiaraDificil()"></li>
+            </ul>
+          </div>
+        
+
+      <div id="footer">
+      </div>
+      <script src="script.js"></script>
+</body>
+</html>
